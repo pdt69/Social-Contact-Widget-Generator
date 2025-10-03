@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Contact Widget Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes scw-pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+    .scw-anim-pulse {
+      animation: scw-pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    @keyframes scw-bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15%);
+      }
+    }
+    .scw-anim-bounce {
+      animation: scw-bounce 1.5s infinite ease-in-out;
+    }
+    @keyframes scw-fade {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.6;
+      }
+    }
+    .scw-anim-fade {
+      animation: scw-fade 2.5s infinite linear;
+    }
+    @keyframes scw-shake {
+      0%, 100% { transform: translateX(0); }
+      10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+      20%, 40%, 60%, 80% { transform: translateX(5px); }
+    }
+    .scw-anim-shake {
+      animation: scw-shake 0.8s infinite ease-in-out;
+    }
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-100 dark:bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
